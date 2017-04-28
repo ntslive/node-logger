@@ -1,0 +1,30 @@
+{
+  "name": "node-logger",
+  "version": "0.0.1",
+  "description": "Logger used by NTS in their Node applications, captures errors with Raven",
+  "main": "node-logger.js",
+  "scripts": {
+    "test": "./node_modules/.bin/eslint ./"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ntslive/node-logger.git"
+  },
+  "keywords": [
+    "node",
+    "logger",
+    "raven"
+  ],
+  "author": "Andi Studer <andi@ntslive.co.uk> (http://www.nts.live)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ntslive/node-logger/issues"
+  },
+  "homepage": "https://github.com/ntslive/node-logger#readme",
+  "dependencies": {
+    "raven": "^1.2.1"
+  },
+  "devDependencies": {
+    "eslint": "^3.19.0"
+  }
+}
