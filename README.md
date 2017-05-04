@@ -5,7 +5,22 @@
 Logger used by NTS in their Node applications.
 Captures errors with Raven.
 
+## Installation
 
+Include as dependency in `package.json`:
+
+`"node-logger": "ntslive/node-logger#0.0.2",`
+
+Note that this requires the Git tag `0.0.2` to be present.
+
+Then run `npm install` as usual.
+
+## Usage
+
+```Javascript
+const logger = require('node-logger');
+logger.error(errorMessage, errorInstance, { dataContext: dataObject });
+```
 
 ## Testing
 
