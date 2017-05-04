@@ -4,3 +4,11 @@
 
 Logger used by NTS in their Node applications.
 Captures errors with Raven.
+
+
+
+## Testing
+
+Run `npm test`
+
+To run eslint with `fix` flag, run `bin/eslint`
