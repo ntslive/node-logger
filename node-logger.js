@@ -24,7 +24,7 @@ module.exports.warn = function(msg, ...msgArgs) {
 };
 
 /**
- * This is reused site-wide. Returns a list of episodes.
+ * Logs messages as errors to the console, and posts them to Sentry, via Raven library (optional)
  *
  * @param msg String - The log message
  * @param error Object - The Error Object
