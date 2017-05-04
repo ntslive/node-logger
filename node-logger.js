@@ -36,14 +36,13 @@ module.exports.error = function(msg, error, options = {}) {
     console.error(`ERROR ${msg}`, error);
 
     if (process.env.SENTRY_DSN && !options.preventRavenCapture) {
-        let ravenOptions = (options.dataContext) ? {
-            extra: options.dataContext,
-        } : {};
+        let extraData = (options.dataContext) ? options.dataContext : {};
 
         if (error instanceof Error) {
-            Raven.captureException(error, ravenOptions, sentryCallback);
+            extraData.errorMessage = msg;
+            Raven.captureException(error, { extra: extraData }, sentryCallback);
         } else {
-            Raven.captureMessage(msg, ravenOptions, sentryCallback);
+            Raven.captureMessage(msg, { extra: extraData }, sentryCallback);
         }
     }
 };
