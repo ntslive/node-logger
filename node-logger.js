@@ -20,7 +20,7 @@ module.exports.info = function(msg, ...msgArgs) {
 };
 
 module.exports.warn = function(msg, ...msgArgs) {
-    console.warn(`WANR ${msg}`, ...msgArgs);
+    console.warn(`WARN ${msg}`, ...msgArgs);
 };
 
 /**
