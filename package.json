@@ -1,6 +1,6 @@
 {
   "name": "node-logger",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Logger used by NTS in their Node applications, captures errors with Raven",
   "main": "node-logger.js",
   "scripts": {
