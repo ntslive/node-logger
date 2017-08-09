@@ -22,13 +22,13 @@
   },
   "homepage": "https://github.com/ntslive/node-logger#readme",
   "dependencies": {
-    "raven": "^1.2.1"
+    "raven": "^2.1.1"
   },
   "devDependencies": {
-    "chai": "^3.5.0",
-    "eslint": "^3.19.0",
-    "mocha": "^3.1.1",
-    "sinon": "^1.17.7",
-    "sinon-chai": "^2.8.0"
+    "chai": "^4.1.1",
+    "eslint": "^4.4.1",
+    "mocha": "^3.5.0",
+    "sinon": "^2.4.1",
+    "sinon-chai": "^2.12.0"
   }
 }
