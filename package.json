@@ -1,10 +1,10 @@
 {
   "name": "node-logger",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Logger used by NTS in their Node applications, captures errors with Raven",
   "main": "node-logger.js",
   "scripts": {
-    "test": "PATH=$(npm bin):$PATH eslint ./ && PATH=$(npm bin):$PATH SENTRY_DSN=https://1234:1234@sentry.io/4567 mocha"
+    "test": "PATH=$(npm bin):$PATH eslint ./ && PATH=$(npm bin):$PATH SENTRY_DSN=https://1234:1234@sentry.io/4567 mocha --exit"
   },
   "repository": {
     "type": "git",
@@ -22,13 +22,13 @@
   },
   "homepage": "https://github.com/ntslive/node-logger#readme",
   "dependencies": {
-    "raven": "^2.1.1"
+    "raven": "^2.6.0"
   },
   "devDependencies": {
-    "chai": "^4.1.1",
-    "eslint": "^4.4.1",
-    "mocha": "^3.5.0",
-    "sinon": "^2.4.1",
-    "sinon-chai": "^2.12.0"
+    "chai": "^4.1.2",
+    "eslint": "^4.19.1",
+    "mocha": "^5.1.1",
+    "sinon": "^4.1.2",
+    "sinon-chai": "^3.0.0"
   }
 }
