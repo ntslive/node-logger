@@ -15,7 +15,7 @@
     "logger",
     "raven"
   ],
-  "author": "Andi Studer <andi@ntslive.co.uk> (http://www.nts.live)",
+  "author": "Andi Studer <andi@ntslive.co.uk> (https://www.nts.live)",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/ntslive/node-logger/issues"
@@ -28,7 +28,7 @@
     "chai": "^4.1.2",
     "eslint": "^4.19.1",
     "mocha": "^5.1.1",
-    "sinon": "^4.1.2",
+    "sinon": "^7.2.2",
     "sinon-chai": "^3.0.0"
   }
 }
