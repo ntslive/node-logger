@@ -1,7 +1,6 @@
 const chai = require('chai');
 const sinonChai = require('sinon-chai');
 const sinon = require('sinon');
-const Raven = require('raven');
 
 const logger = require('../node-logger.js');
 

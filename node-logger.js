@@ -1,7 +1,6 @@
-const Raven = require('raven');
-const SENTRY_DSN = process.env.SENTRY_DSN_DEPRECATED || process.env.SENTRY_DSN;
-if (SENTRY_DSN) {
-    Raven.config(SENTRY_DSN).install();
+const Sentry = require('@sentry/node');
+if (process.env.SENTRY_DSN) {
+    Sentry.init({dsn: process.env.SENTRY_DSN});
 }
 
 let sentryCallback = function(sendErr, eventId) {
@@ -25,32 +24,31 @@ module.exports.warn = function(msg, ...msgArgs) {
 };
 
 /**
- * Logs messages as errors to the console, and posts them to Sentry, via Raven library (optional)
+ * Logs messages as errors to the console, and posts them to Sentry, via Sentry Node SDK (optional)
  *
  * @param msg String - The log message
  * @param error Object - The Error Object
  * @param options Object - valid options include:
- *     -  preventRavenCapture Boolean - if true, the exception is captured with Raven
- *     -  dataContext Object - extra data to be captured with Raven
+ *     -  preventSentryCapture Boolean - if true, the exception is captured with Sentry
+ *     -  dataContext Object - extra data to be captured with Sentry
  */
 module.exports.error = function(msg, error, options = {}) {
     console.error(`ERROR ${msg}`, error);
 
-    if (process.env.SENTRY_DSN && !options.preventRavenCapture) {
+    if (process.env.SENTRY_DSN && !options.preventSentryCapture) {
         let sentryOptions = {};
         // keep checking for options.dataContext to keep compatible with older versios
         sentryOptions.extra = options.dataContext || options.extra || {};
         if (options.fingerprint) { sentryOptions.fingerprint = options.fingerprint; }
         if (options.level) { sentryOptions.level = options.level; }
-        if (options.req) { sentryOptions.req = options.req; }
         if (options.tags) { sentryOptions.tags = options.tags; }
         if (options.user) { sentryOptions.user = options.user; }
 
         if (error instanceof Error) {
             sentryOptions.extra.errorMessage = msg;
-            Raven.captureException(error, sentryOptions, sentryCallback);
+            Sentry.captureException(error, sentryOptions, sentryCallback);
         } else {
-            Raven.captureMessage(msg, sentryOptions, sentryCallback);
+            Sentry.captureMessage(msg, sentryOptions, sentryCallback);
         }
     }
 };

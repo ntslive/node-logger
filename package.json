@@ -14,7 +14,7 @@
   "keywords": [
     "node",
     "logger",
-    "raven"
+    "sentry"
   ],
   "author": "Andi Studer <andi@ntslive.co.uk> (https://www.nts.live)",
   "license": "ISC",
@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/ntslive/node-logger#readme",
   "dependencies": {
-    "raven": "^2.6.4"
+    "@sentry/node": "^6.1.0"
   },
   "devDependencies": {
     "chai": "^4.1.2",
