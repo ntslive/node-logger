@@ -8,6 +8,18 @@
   "rules": {
     // 0 = allowed, 1 = warning, 2 = error.
 
+    "no-multiple-empty-lines": [2, {"max": 2}],
+    "max-len": ["error", {
+        "code": 136,
+        "tabWidth": 4,
+        "ignoreComments": true,
+        "ignoreTrailingComments": true,
+        "ignoreStrings": true,
+        "ignoreUrls": true,
+        "ignoreTemplateLiterals": true,
+        "ignoreRegExpLiterals": true
+    }],
+
     // Javascript
     "no-unused-vars": 0, /* Allow unused variables. Good for leaving unused function parameters visible */
     "no-console": 0, /* Allow console logs */
