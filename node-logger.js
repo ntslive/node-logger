@@ -1,6 +1,7 @@
 const Raven = require('raven');
-if (process.env.SENTRY_DSN) {
-    Raven.config(process.env.SENTRY_DSN).install();
+const SENTRY_DSN = process.env.SENTRY_DSN_DEPRECATED || process.env.SENTRY_DSN;
+if (SENTRY_DSN) {
+    Raven.config(SENTRY_DSN).install();
 }
 
 let sentryCallback = function(sendErr, eventId) {
