@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.1.0
+
+* upgrading Sentry node module
+
 ## 2.0.0
 
 * Migration from Raven client to Sentry Node SDK client

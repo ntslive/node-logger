@@ -1,6 +1,6 @@
 {
   "name": "node-logger",
-  "version": "1.0.1",
+  "version": "2.1.0",
   "description": "Logger used by NTS in their Node applications, captures errors with Raven",
   "main": "node-logger.js",
   "scripts": {
@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/ntslive/node-logger#readme",
   "dependencies": {
-    "@sentry/node": "^6.1.0"
+    "@sentry/node": "^6.13.3"
   },
   "devDependencies": {
     "chai": "^4.1.2",
